@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/Pagina3.css">
+  <title>Equipos Clasificados por Fase</title>
+</head>
+<body>
+  <div class="cabecera">
+    <a href="https://blogsaverroes.juntadeandalucia.es/iestorrredelosguzmanes/">
+      <img src="/img/rfxDXq01 (1).svg" alt="Logo">
+    </a>
+    <h1>Torneo Debate</h1>
+    <a href="/app/index"><button>Inicio</button></a>
+  </div>
+
+  <div class="caja">
+    Equipos Clasificados por Fase
+  </div>
+
+  <p>Clasificados en la primera fase</p>
+  <table>
+    <tr th:each="fila : ${#lists.partition(equiposFase1, 2)}">
+      <td th:text="${fila[0].nombre}">Equipo 1</td>
+      <td th:if="${fila.size() > 1}" th:text="${fila[1].nombre}">Equipo 2</td>
+    </tr>
+  </table>
+
+  <p>Clasificados en la eliminatoria</p>
+  <table>
+    <tr th:each="fila : ${#lists.partition(equiposEliminatoria, 2)}">
+      <td th:text="${fila[0].nombre}">Equipo 1</td>
+      <td th:if="${fila.size() > 1}" th:text="${fila[1].nombre}">Equipo 2</td>
+    </tr>
+  </table>
+
+  <p>Clasificados en la semifinal</p>
+  <table>
+    <tr th:each="fila : ${#lists.partition(equiposSemifinal, 2)}">
+      <td th:text="${fila[0].nombre}">Equipo 1</td>
+      <td th:if="${fila.size() > 1}" th:text="${fila[1].nombre}">Equipo 2</td>
+    </tr>
+  </table>
+
+  <p>Equipo ganador</p>
+  <table class="final">
+    <tr th:each="equipo : ${equipoGanador}">
+      <td th:text="${equipo.nombre}">Equipo 1</td>
+    </tr>
+  </table>
+</body>
+</html>

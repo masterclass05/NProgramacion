@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+  url("unnamed.jpg");
+  background-size:100%;
+}
+
+.cabecera {
+  background-color: #49a6f2;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.cabecera img {
+  height: 150px;
+  margin-left: 10px;
+}
+
+.cabecera h1 {
+  font-size: 36px;
+  font-style: italic;
+}
+
+.cabecera button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
+}
+
+.caja {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.button {
+  background-color: #0062ff;
+  color: black;
+  font-weight: bold;
+  padding: 50px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 100px;
+}

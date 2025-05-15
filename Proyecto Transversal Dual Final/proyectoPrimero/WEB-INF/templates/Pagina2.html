@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/Pagina2.css">
+  <title>Mejor Orador</title>
+</head>
+<body>
+  <div class="cabecera">
+    <a href="https://blogsaverroes.juntadeandalucia.es/iestorrredelosguzmanes/">
+      <img src="/img/rfxDXq01 (1).svg" alt="Logo">
+    </a>
+    <h1>Torneo Debate</h1>
+    <a href="/app/index"><button>Inicio</button></a>
+  </div>
+  <div class="caja">
+    Puntuación Mejor Orador
+  </div>
+  <table>
+    <tr>
+      <th>Alumno</th>
+      <th>Puntuación</th>
+    </tr>
+    <!-- Thymeleaf: solo el primer orador de la lista -->
+    <tr th:each="orador, iterStat : ${oradores}" th:if="${iterStat.index == 0}">
+      <td th:text="${orador.nombre}">Alumno 1</td>
+      <td th:text="${orador.puntuacionTotal}">Puntuación 1</td>
+    </tr>
+  </table>
+</body>
+</html>
